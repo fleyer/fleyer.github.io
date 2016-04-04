@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+
+    <title>Test Com</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="Manchado Romain" content="Projet de communication">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css
+    '>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+   
+    <header>
+		<div class="wrapper-photo">
+			<div class="photo photo-xs" >
+						
+			</div>
+		</div>
+        
+        <div class="wrapper">
+                <span class="title">Romain Manchado
+                	<i class="path glyphicon glyphicon-chevron-left" onclick="javascript:history.back()"></i>
+                </span>
+                <span class="path">
+                </span>
+        </div>
+    </header>
+
+    <div class="content">
+		<drawer>
+			<div class="menu">
+				<a href="cvdoc.pdf">Mon CV</a>
+				<a href="#">Mes Projets</a>
+				<a href="gallery.html">Ma gallery</a>
+				<a href="#"></a>
+			</div>
+			<div class="soc">
+			    <a class="soc-facebook" href="https://www.facebook.com/romain.manchado.7"></a>
+			    <a class="soc-google" href="#"></a>
+			    <a class="soc-linkedin" href="https://fr.linkedin.com/in/manchado-romain-b60896b1"></a>
+			</div>
+		</drawer>
+		<div class="left opened">
+			
+			<div class=" element active hover" data-drawable="true" data-drawableBack="15%"
+				data-hash="avenir" data-load="attente.html" data-content="Je commence à avoir de l'experience ça vaut peut être le coup d'y jeter un oeil!">
+					<span class="title">Dans l'avenir</span>
+				<div class=" content ">
+				
+				</div>
+				<a href="#avenir"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			
+			<div class=" element hover" data-drawable="true" data-drawableBack="15%"
+				data-hash="personnalite" data-content="Découvrez les formations que j'ai faites !">
+				  <span class="title">Traits de personnalité</span>
+				<div class="content " >
+					
+				</div>
+				<a href="#personnalite"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			
+			<div class=" element hover" data-drawable="true" data-drawableBack="15%"
+				data-hash="interet">
+				<span class="title">Centres d'intérêt</span>
+				<div class=" content ">
+					
+				</div>
+				<a href="#interet"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+		
+		<div class="right" data-drawableposition="15%" data-drawableback="100%">
+		</div>
+	</div>
+    
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="velocity.min.js"></script>
+	<script src="velocity.ui.min.js"></script>    
+    <script type="text/javascript" src="Mydrawable.js"></script>
+	<script type="text/javascript" src="MydrawerMenu.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        if(location.hash != ''){
+            hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true);
+        }
+    });
+    
+    $(window).on('load',function(){
+    	$('html').show();
+    })
+        
+    </script>
+</body>	
+
+</html>
