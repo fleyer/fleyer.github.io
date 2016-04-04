@@ -148,11 +148,11 @@ function outLeft($elems){
 	$('.path').fadeOut(200);
 	$source.toggleClass('hover');
 	$elems.velocity("reverse");
-	/*$elems.velocity({
+	$elems.velocity({
 		translateZ: 0,
 		left: $elems.data('drawableback'),
 		easing: "swing"	
-	});*/
+	});
 	
 	$('.right').velocity('reverse');
 	toggleOpened();
@@ -185,11 +185,11 @@ $(document).on('mousedown',$element,mouseDownHandler);
 	
 $(window).on("hashchange", function (e,data) {
 	if(location.hash == ''){
-		outLeft($('.element').not($source));
+		$(document).queue('animation',outLeft($('.element').not($source)));
 		$(document).on('mousedown',$element,mouseDownHandler);
 	}
 	if(location.hash != '' && $('.left').hasClass('opened')){
-		hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true);
+		$(document).queue('animation',hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true));
 	}
 });
 
