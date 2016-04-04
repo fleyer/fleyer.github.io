@@ -2,57 +2,130 @@
 	<meta charset="utf-8">
 <style>
 	#attentes {
+		display:flex;
+		overflow:hidden;
+		flex-flow:column;
 		position:relative;
 		width:100%;
-		background-color:rgb(0, 161, 255);
+		height:100%;
 		color:white;
 		font-weight:bold;
 		font-family: Verdana, Geneva, sans-serif;
 	}
 
 	.header {
-		padding:3px;
+		display:block;
+		padding:5px 5px 5px 5px;
 		background-color:rgb(0, 123, 255);
-		box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 1px 1px rgba(0,0,0,0.23);
+		/*box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 1px 1px rgba(0,0,0,0.23);*/
+		margin-bottom:10px;
 	}
 
 	titre {
-		display:block;
+		display:inline-block;
 		font-size:1.2em;
 	}
 
 	soustitre {
-		display: block;
-		box-sizing: border-box;
-		color:rgb(180, 180, 180);
+		display:inline-block;
+		color:#DBDBDB;
 		font-size:0.7em;
 	}
 
-	contenu {
+	contenu.container-fluid {
 		display:block;
+		flex:1;
+		position:relative;
+		color:#424242;
 		font-size: 0.8em;
 		text-align: justify;
-
-		padding-top:10px;
-		padding-left:3px;
-		padding-right:3px;
+		padding-right:10px;
 		padding-bottom:10px;
+		background-color:rgba(196, 196, 196, 0.5);
+		/*-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);*/
 	}
+	
+	.row {
+		height:100%;
+	}
+	
+	br {
+		content:"";
+		display: block;
+   		margin: 10px 0;
+	}
+	
+	.principal{
+		background-color:#337CCC;
+		color:white;
+		padding:10px;
+	}
+	
+	.principal > ul {
+		list-style-type:square;
+	}
+	
+	.image {
+		height:100%;
+		display:flex;
+		padding-top:20px;
+		padding-bottom:20px;
+		flex-flow:column;
+		background-color:rgba(196, 196, 196, 0.5);
+	}
+	
+	.img {
+		height:400px; 
+		width:300px;
+		align-self:center;
+	}
+	
+	.desc {
+		align-self:center;
+		text-align:center;
+		margin-top:15px;
+	}
+	
 </style>
-<body>
-	<div id="attentes">
-		<div class="header">
-			<titre>
-				Mes attentes
-			</titre>
-			<soustitre>
-				Je vais parler ici de mes attentes dans la vie de tout les jours mais aussi au niveau professionnel.
-			</soustitre>
+
+<div id="attentes">
+	<div class="header">
+		<titre>
+			Mes attentes
+		</titre>
+		<soustitre>
+			Je vais parler ici de mes attentes dans la vie de tout les jours mais aussi au niveau professionnel.
+		</soustitre>
+	</div>
+	<contenu class="container-fluid">
+		<div class ="row">
+			<div class="col-md-offset-1 col-xs-12 col-md-7">
+				<h2>Pour faire simple, le travail c'est la vie.</h2>
+				C'est une phrase très idéaliste, je vois le travail comme nécessaire. C'est une part importante de notre vie, à nous donc de le rendre intéressant. Le travail n’est pas quelque chose que nous devons subir, même si des fois nous ne faisons pas ce que nous voulons.
+				<br>
+				<div class="principal">
+					Concrètement, mes attentes vis à vis de ma vie de demain sont : 
+					<ul>
+						<li>Je veux pouvoir me faire plaisir dans mon travail, me réaliser et me découvrir.</li> 
+						<li>Comme je l’ai montré dans les rubriques du site, j’aime créer. </li>
+						<li>Les problèmes ne me font pas peur, mais je veux avoir les moyens de les résoudre.</li>
+					</ul>
+				</div>
+				<br>
+				Je n’ai pas vraiment d’idée fixe sur ce que je vais faire demain. Par contre ce qui est sûr, c’est que je vais faire quelque chose ! Aujourd’hui je suis en alternance dans une grande boite de service informatique SOPRA STERIA. C’est très intéressant de découvrir comment marche une grande boîte. Mais ce qui me manque c’est l’implication dans le travail. Je m’explique, je suis développeur dans un projet. Ce projet est une fusion de deux systèmes d’information. Et clairement le travail que je fais, je ne le comprends pas, pas encore… 
+				<br>
+				Je réalise des tâches planifiées sans en voir la finalité. Ayant travaillé dans le bâtiment, ce me frustre de pas voir/ comprendre le résultat.
+				<br>
+				Au final, je pense que l’expérience que je vais acquérir dans une grande boîte est très précieuse mais par rapport à moi et mes attentes, je pense, et même je veux un jour participer à des projets de start-up. Pour pouvoir m’impliquer et participer activement à la réalisation d’un projet.
+			</div>
+			<div class="hidden-xs hidden-sm hidden-md col-md-4 image">
+                    <img class="img" src="./images/gallery/miniatures/image5.jpg">
+                  	<div class="desc">Un attrape rêve très pratique</div>
+            </div>
 		</div>
-		<contenu>
-		Pour faire simple, le travail c'est la vie.
-		C'est idiot comme phrase mais je trouve qu'elle a du sens. Je vois le travail comme nécessaire. C'est une part importante de notre vie, à nous donc de le rendre interressant
-		</contenu>
-	<div>	
-</body>
+	</contenu>
+</div>
 </html>
+
