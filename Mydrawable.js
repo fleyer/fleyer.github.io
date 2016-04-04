@@ -5,6 +5,7 @@ var $element = 'div[data-drawable="true"]';
 var $others;
 var $back;
 var $backValue;
+var $process = $.Callbacks("once");
 
 
 /*****************************************************
@@ -73,9 +74,9 @@ function mouseUpHandler(e){
 	}
 	
     if($source.position().left + $source.width() > $('body').width()*0.90){
-    	//hideLeft($others);
+    	hideLeft($others);
     	//window.history.pushState('page2', 'Title', '/page2.php');
-    	location.hash = $source.data('hash');
+    	//location.hash = $source.data('hash');
     }else{ 
     	if(Moved)
 	    	$others.velocity({
@@ -94,8 +95,6 @@ function mouseUpHandler(e){
 }
 
 function hideLeft($elems,boolean,f){
-
-	toggleOpened();
 	var elemsLeft = $elems.first().width();
 	$(document).off('mousedown',$element,mouseDownHandler);
 	/*if(boolean == 'undefined'){*/
@@ -130,12 +129,14 @@ function hideLeft($elems,boolean,f){
 						width: "70%"
 					},{
 						 duration: 200,
-					})
+					});
+					//$process.fire();
+					toggleOpened();
+					location.hash = $source.data('hash');
 				}
 			});
 		},
 	});
-	
 	$source.toggleClass('hover');
 	if( f)
 		f();
@@ -155,8 +156,9 @@ function outLeft($elems){
 	});
 	
 	$('.right').velocity('reverse');
+	$(document).on('mousedown',$element,mouseDownHandler);
 	toggleOpened();
-
+	
 }
 
 function toggleOpened(){
@@ -184,12 +186,22 @@ $('.element').on('touchstart',tapHandler);
 $(document).on('mousedown',$element,mouseDownHandler);
 	
 $(window).on("hashchange", function (e,data) {
-	if(location.hash == ''){
-		$(document).queue('animation',outLeft($('.element').not($source)));
-		$(document).on('mousedown',$element,mouseDownHandler);
+	if(location.hash == '' && $('.right').hasClass('opened')){
+		outLeft($('.element').not($source))
+		//$process.fire();
 	}
 	if(location.hash != '' && $('.left').hasClass('opened')){
-		$(document).queue('animation',hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true));
+		hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true);
+	}
+	
+	if(location.hash == '' && $('.left').hasClass('opened')){
+		/*$(document).queue('animation',outLeft($('.element').not($source)));
+		$(document).on('mousedown',$element,mouseDownHandler);*/
+		//$process.add(outLeft($('.element').not($source)));
+		/*$process.add(function(){
+			outLeft($('.element').not($source))
+		});*/
+			//outLeft($('.element').not($source));
 	}
 });
 
