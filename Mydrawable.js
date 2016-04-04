@@ -75,8 +75,6 @@ function mouseUpHandler(e){
 	
     if($source.position().left + $source.width() > $('body').width()*0.90){
     	hideLeft($others);
-    	//window.history.pushState('page2', 'Title', '/page2.php');
-    	//location.hash = $source.data('hash');
     }else{ 
     	if(Moved)
 	    	$others.velocity({
@@ -97,14 +95,11 @@ function mouseUpHandler(e){
 function hideLeft($elems,boolean,f){
 	var elemsLeft = $elems.first().width();
 	$(document).off('mousedown',$element,mouseDownHandler);
-	/*if(boolean == 'undefined'){*/
 		
 	if(boolean)
 		$source = $('div[data-hash="'+location.hash.replace('#','')+'"]');
 	
-	$('.right').empty();
-	
-	//$('.right').load($source.data('load'));
+	$('.right').load($source.data('load'));
 	
 	$elems.velocity({
 		translateZ: 0,
@@ -124,13 +119,12 @@ function hideLeft($elems,boolean,f){
 				complete: function(){
 					$('.right').velocity({
 						translateZ: 0,
-						left: "15%",
+						left: "10%",
 						easing: "swing",
-						width: "70%"
+						width: "80%"
 					},{
 						 duration: 200,
 					});
-					//$process.fire();
 					toggleOpened();
 					location.hash = $source.data('hash');
 				}
@@ -147,6 +141,8 @@ function outLeft($elems){
 	elemsLeft = $elems.first().next().data('drawableback');
 	$source.velocity('reverse');
 	$('.path').fadeOut(200);
+	$('.right > *').fadeOut(200);
+	$('.right').empty();
 	$source.toggleClass('hover');
 	$elems.velocity("reverse");
 	$elems.velocity({
@@ -188,20 +184,14 @@ $(document).on('mousedown',$element,mouseDownHandler);
 $(window).on("hashchange", function (e,data) {
 	if(location.hash == '' && $('.right').hasClass('opened')){
 		outLeft($('.element').not($source))
-		//$process.fire();
+
 	}
 	if(location.hash != '' && $('.left').hasClass('opened')){
 		hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true);
 	}
 	
 	if(location.hash == '' && $('.left').hasClass('opened')){
-		/*$(document).queue('animation',outLeft($('.element').not($source)));
-		$(document).on('mousedown',$element,mouseDownHandler);*/
-		//$process.add(outLeft($('.element').not($source)));
-		/*$process.add(function(){
-			outLeft($('.element').not($source))
-		});*/
-			//outLeft($('.element').not($source));
+
 	}
 });
 
