@@ -73,7 +73,7 @@ function mouseUpHandler(e){
 	}
 	
     if($source.position().left + $source.width() > $('body').width()*0.90){
-    	hideLeft($others);
+    	//hideLeft($others);
     	//window.history.pushState('page2', 'Title', '/page2.php');
     	location.hash = $source.data('hash');
     }else{ 
