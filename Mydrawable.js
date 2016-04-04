@@ -147,11 +147,12 @@ function outLeft($elems){
 	$source.velocity('reverse');
 	$('.path').fadeOut(200);
 	$source.toggleClass('hover');
-	$elems.velocity({
+	$elems.velocity("reverse");
+	/*$elems.velocity({
 		translateZ: 0,
 		left: $elems.data('drawableback'),
 		easing: "swing"	
-	});
+	});*/
 	
 	$('.right').velocity('reverse');
 	toggleOpened();
