@@ -241,7 +241,7 @@ header:hover > .wrapper-photo > .photo {
 	display:flex;
 	position:relative;
 	left:15%;
-	flex-flow: column;
+	flex-direction: column;
 	overflow:hidden;
 	padding-bottom:0.5%;
 	width:70%;
@@ -260,7 +260,7 @@ header:hover > .wrapper-photo > .photo {
 }
 
 .element:hover > a > .glyphicon {
-	-webkit-transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1.5);   
