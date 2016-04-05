@@ -47,15 +47,15 @@
 	}
 }
 
-@media (max-width: @screen-xs) {
+@media (max-width: 600px) {
     .dynamic{font-size: 10px;}
 }
 	
-@media (max-width: @screen-sm) {
+@media (max-width: 800px) {
     .dynamic{font-size: 11px;}
 }
 
-@media (max-width: @screen-md) {
+@media (max-width: 990px) {
     .dynamic{font-size: 11px;}
 }
 
