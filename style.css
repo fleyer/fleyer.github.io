@@ -213,7 +213,7 @@ header:hover > .wrapper-photo > .photo {
 	left:5px;
 	border-radius: 50%;
 	border-style:solid;
-	border-width: 3px;
+	border-width: 5px;
 	background-image:url('./images/perso.png');
 	background-position: center;
 	background-size: auto 100%;
