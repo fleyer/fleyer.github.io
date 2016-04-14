@@ -19,6 +19,10 @@
 	header > .wrapper > .title:not(.path) {
 		line-height: 1.2em
 	}
+	
+	.content {
+		display:none;
+	}
 
 	
 }
