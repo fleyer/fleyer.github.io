@@ -1,0 +1,128 @@
+<html>
+	<meta charset="utf-8">
+<style>
+	#attentes {
+		display:flex;
+		overflow:hidden;
+		flex-flow:column;
+		position:relative;
+		width:100%;
+		height:100%;
+		color:white;
+		font-weight:bold;
+		font-family: Verdana, Geneva, sans-serif;
+	}
+
+	.header {
+		display:block;
+		padding:5px 5px 5px 5px;
+		background-color:rgb(0, 123, 255);
+		/*box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 1px 1px rgba(0,0,0,0.23);*/
+		margin-bottom:10px;
+	}
+
+	titre {
+		display:inline-block;
+		font-size:1.2em;
+	}
+
+	soustitre {
+		display:inline-block;
+		color:#DBDBDB;
+		font-size:0.7em;
+	}
+
+	contenu.container-fluid {
+		display:block;
+		flex:1;
+		position:relative;
+		color:#424242;
+		font-size: 0.8em;
+		text-align: justify;
+		padding-right:10px;
+		padding-bottom:10px;
+		background-color:rgba(196, 196, 196, 0.5);
+		/*-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);*/
+	}
+	
+	.row {
+		height:100%;
+	}
+	
+	br {
+		content:"";
+		display: block;
+   		margin: 10px 0;
+	}
+	
+	.principal{
+		background-color:#337CCC;
+		color:white;
+		padding:10px;
+	}
+	
+	.principal > ul {
+		list-style-type:square;
+	}
+	
+	.image {
+		height:100%;
+		display:flex;
+		padding-top:20px;
+		padding-bottom:20px;
+		flex-flow:column;
+		background-color:rgba(196, 196, 196, 0.5);
+	}
+	
+	.img {
+		height:400px; 
+		width:300px;
+		align-self:center;
+	}
+	
+	.desc {
+		align-self:center;
+		text-align:center;
+		margin-top:15px;
+	}
+	
+</style>
+
+<div id="attentes">
+	<div class="header">
+		<titre>
+			Qui sui-je ?
+		</titre>
+		<soustitre>
+			
+		</soustitre>
+	</div>
+	<contenu class="container-fluid">
+		<div class ="row">
+			<div class="col-md-offset-1 col-xs-12 col-md-7">
+				<h2>Le verre est soit à moitié vide, soit à motié plein.</h2>
+				Je ne sais pas ! Je veux donner le meilleur de moi-même pour mes proches. Pour moi le respect est quelque chose que tout devrait avoir. Passionné, je peux me plonger dans quelque chose et avoir du mal à en ressortir.
+				<br>
+				<div class="principal">
+				    Je veux être souriant, aider les personnes, partager, « make the world a better place ». C’est un peu orgueilleux mais selon mes capacités j’aimerai participer à cet effort qui nous est demandé.
+				</div>
+				<br>
+			    Je veux être souriant, aider les personnes, partager, « make the world a better place ». C’est un peu orgueilleux mais selon mes capacités j’aimerai participer à cet effort qui nous est demandé.
+			    <br>
+			    J’aimerai un jour réaliser un projet qui permettra de mettre en application ce que je viens de dire. Dans un futur proche j’espère pouvoir présenter ce projet pour voir les possibilités.
+			</div>
+			<div class="hidden-xs hidden-sm hidden-md col-md-4 image">
+                    <img class="img" src="./images/gallery/miniatures/minkey.png" width="300" height="200">
+                  	<div class="desc">De la couleur</div>
+            </div>
+		</div>
+	</contenu>
+</div>
+</html>
+
+
+
+
+
