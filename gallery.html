@@ -1,13 +1,18 @@
 <html>
 	<meta charset="utf-8">
-    <style>
-        html,body {
-            display:block;
-            margin:0;
-            padding:0;
-            width:100%;
-        }
-        
+    <body>
+        <title>Gallery</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="Manchado Romain" content="Projet de communication">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css
+    '>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<style>
         a {
             text-decoration:none;
         }
@@ -16,6 +21,8 @@
             width:100%;
             display: -webkit-flex;
             display: flex;
+            flex:1 1 0;
+            overflow-y: scroll;
             justify-content:center;
             flex-flow:row wrap;
         }
@@ -50,101 +57,169 @@
             text-align: center;
             background-color:#03A56C;
         }
+        
+        .content {
+            padding:0;
+        }
+        
+        #ex3::-webkit-scrollbar-thumb{
+            background-color:#B03C3F;
+            border-radius:10px;
+        }
+        #ex3::-webkit-scrollbar-thumb:hover{
+            background-color:#BF4649;
+            border:1px solid #333333;
+        }
+        #ex3::-webkit-scrollbar-thumb:active{
+            background-color:#A6393D;
+            border:1px solid #333333;
+        } 
     </style>
-    <body>
-        <gallery>
-            <column>
-                <div class="img">
-                  <a target="_blank" href="./images/minkey.png">
-                    <img src="./images/gallery/miniatures/minkey.png" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                  
-                </div>
-                
-                <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image1.jpg">
-                    <img src="./images/gallery/miniatures/image1.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                  
-                </div>
-                
-                 <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image2.jpg">
-                    <img src="./images/gallery/miniatures/image2.jpg" width="300" height="200">
-                     <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
-                
-                 <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image3.jpg">
-                    <img src="./images/gallery/miniatures/image3.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                 
-                </div>
-            </column>
-            
-            <column>
-               <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image4.jpg">
-                    <img src="./images/gallery/miniatures/image4.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
-                
-                 <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image5.jpg">
-                    <img src="./images/gallery/miniatures/image5.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
-                
-                 <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image6.jpg">
-                    <img src="./images/gallery/miniatures/image6.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
-                
-                 <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image7.jpg">
-                    <img src="./images/gallery/miniatures/image7.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
-                
+</head>
 
-            </column>
-            
-            <column>
-                <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image9.jpg">
-                    <img src="./images/gallery/miniatures/image9.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
+<body>
+   
+    <header>
+		<div class="wrapper-photo">
+			<div class="photo photo-xs" >
+						
+			</div>
+		</div>
+        
+        <div class="wrapper">
+                <a href="index.hmtl"></a><span class="title">Romain Manchado
+                	<i class="path glyphicon glyphicon-chevron-left" onclick="javascript:history.back()"></i>
+                </span></a>
+                <span class="path">
+                </span>
+        </div>
+    </header>
+
+    <div class="content">
+        
+		<drawer>
+			<div class="menu">
+				<a href="cvdoc.pdf">Mon CV</a>
+				<a href="#">Mes Projets</a>
+				<a href="gallery.html">Ma gallery</a>
+				<a href="#"></a>
+			</div>
+			<div class="soc">
+			    <a class="soc-facebook" href="https://www.facebook.com/romain.manchado.7"></a>
+			    <a class="soc-google" href="#"></a>
+			    <a class="soc-linkedin" href="https://fr.linkedin.com/in/manchado-romain-b60896b1"></a>
+			</div>
+		</drawer>
+    	<div class="left opened">
+    	    	<gallery>
+                <column>
+                    <div class="img">
+                      <a target="_blank" href="./images/minkey.png">
+                        <img src="./images/gallery/miniatures/minkey.png" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                      
+                    </div>
+                    
+                    <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image1.jpg">
+                        <img src="./images/gallery/miniatures/image1.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                      
+                    </div>
+                    
+                     <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image2.jpg">
+                        <img src="./images/gallery/miniatures/image2.jpg" width="300" height="200">
+                         <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    
+                     <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image3.jpg">
+                        <img src="./images/gallery/miniatures/image3.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                     
+                    </div>
+                </column>
                 
-                <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image10.jpg">
-                    <img src="./images/gallery/miniatures/image10.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div>
-                <div class="img">
-                  <a target="_blank" href="./images/gallery/large/image8.jpg">
-                    <img src="./images/gallery/miniatures/image8.jpg" width="300" height="200">
-                    <div class="desc">Un petit singe multicolore</div>
-                  </a>
-                </div> 
-            </column>
-        	
-            
-             
-            
-            
-        </gallery>    
+                <column>
+                   <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image4.jpg">
+                        <img src="./images/gallery/miniatures/image4.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    
+                     <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image5.jpg">
+                        <img src="./images/gallery/miniatures/image5.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    
+                     <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image6.jpg">
+                        <img src="./images/gallery/miniatures/image6.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    
+                     <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image7.jpg">
+                        <img src="./images/gallery/miniatures/image7.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    
+    
+                </column>
+                
+                <column>
+                    <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image9.jpg">
+                        <img src="./images/gallery/miniatures/image9.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    
+                    <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image10.jpg">
+                        <img src="./images/gallery/miniatures/image10.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div>
+                    <div class="img">
+                      <a target="_blank" href="./images/gallery/large/image8.jpg">
+                        <img src="./images/gallery/miniatures/image8.jpg" width="300" height="200">
+                        <div class="desc">Un petit singe multicolore</div>
+                      </a>
+                    </div> 
+                </column>
+            </gallery>
+    	</div>
+	</div>
+    
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="velocity.min.js"></script>
+	<script src="velocity.ui.min.js"></script>    
+    <script type="text/javascript" src="Mydrawable.js"></script>
+	<script type="text/javascript" src="MydrawerMenu.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        if(location.hash != ''){
+            hideLeft($('.element').not('div[data-hash="'+location.hash.replace('#','')+'"]'),true);
+        }
+    });
+    
+    $(window).on('load',function(){
+    	$('html').show();
+    })
+        
+    </script>
     </body>
 </html>
 
