@@ -49,6 +49,10 @@
 	.wrapper-photo {
 		width:100px;
 	}
+	
+	.content {
+		display:flex;
+	}
 }
 
 @media (max-width: 600px) {
@@ -241,7 +245,6 @@ header:hover > .wrapper-photo > .photo {
 
 .content {
 	position:relative;
-	display:flex;
 	width:100%;
 	flex: 1 1 auto;
 	padding-bottom:10px;
