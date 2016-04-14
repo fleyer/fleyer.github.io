@@ -20,7 +20,7 @@
 		line-height: 1.2em
 	}
 	
-	.content {
+	element > .content {
 		display:none;
 	}
 
@@ -50,7 +50,7 @@
 		width:100px;
 	}
 	
-	.content {
+	element > .content {
 		display:flex;
 	}
 }
