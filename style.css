@@ -272,7 +272,7 @@ header:hover > .wrapper-photo > .photo {
 	font-size:.8em;
 }
 
-.contenu {
+contenu {
 	overflow-y:scroll;
 }
 
