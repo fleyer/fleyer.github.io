@@ -274,6 +274,7 @@ header:hover > .wrapper-photo > .photo {
 
 contenu {
 	overflow-y:scroll;
+	overflow-x:hidden;
 }
 
 .element {
