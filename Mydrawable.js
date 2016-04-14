@@ -114,6 +114,7 @@ function hideLeft($elems,boolean,f){
 				translateZ: 0,
 				top: -($('.content').position().top + $source.position().top +$source.height()),
 				easing: "swing",
+				opacity: 0
 			},{
 				duration:200,
 				complete: function(){
