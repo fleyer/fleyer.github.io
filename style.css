@@ -249,6 +249,19 @@ header:hover > .wrapper-photo > .photo {
 	display:block;
 }
 
+.dynamic {
+	display:flex;
+	overflow:hidden;
+	flex-direction:column;
+	position:relative;
+	width:100%;
+	height:100%;
+	color:white;
+	font-weight:bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:.8em;
+}
+
 .element {
 	display:flex;
 	position:relative;
