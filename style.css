@@ -68,6 +68,10 @@
   }
 }
 
+a {
+	text-decoration:none;
+}
+
 html {
 	display:none;
 	width: 100%;
@@ -173,7 +177,13 @@ header > .wrapper >.title {
 	display:inline-flex;
 	flex-flow:row;
 }
-
+header > div > a > span {
+	padding-top: 20px;
+	height:100%;
+	font-family: 'Lobster', cursive;
+	z-index:0;
+	margin-left:0;
+}
 header > div > span {
 	padding-top: 20px;
 	height:100%;
