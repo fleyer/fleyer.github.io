@@ -47,6 +47,18 @@
 	}
 }
 
+@media (max-width: 600px) {
+    .dynamic{font-size: 10px;}
+}
+	
+@media (max-width: 800px) {
+    .dynamic{font-size: 11px;}
+}
+
+@media (max-width: 990px) {
+    .dynamic{font-size: 11px;}
+}
+
 @keyframes menu-animation {
   0%,100%{
 	background:url('images/menu.png') #0F0F0F;
@@ -241,7 +253,7 @@ header:hover > .wrapper-photo > .photo {
 	display:flex;
 	position:relative;
 	left:15%;
-	flex-flow: column;
+	flex-direction: column;
 	overflow:hidden;
 	padding-bottom:0.5%;
 	width:70%;
@@ -260,7 +272,7 @@ header:hover > .wrapper-photo > .photo {
 }
 
 .element:hover > a > .glyphicon {
-	-webkit-transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1.5);   
