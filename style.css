@@ -272,6 +272,10 @@ header:hover > .wrapper-photo > .photo {
 	font-size:.8em;
 }
 
+.contenu {
+	overflow-y:scroll;
+}
+
 .element {
 	display:flex;
 	position:relative;
