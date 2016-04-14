@@ -372,18 +372,19 @@ div[data-hash="competences"]  {
 }
 
 .soc {
-	position:relative;
-	background:#474747;
+    position:relative;
+    background:#474747;
     overflow:hidden;
-    padding:5px 5px 5px 5px;
+    padding:5px;
     list-style:none;
     display:flex;
     width:100%;
     flex-flow:row;
+    justify-content:space-around;
+    
 }
 
 .soc a {
-	flex:1 1;
     font-family:si!important;
     font-style:normal;
     font-weight:400;
@@ -408,6 +409,7 @@ div[data-hash="competences"]  {
     margin-right: 10px;
     color: #ffffff;
     background-color: none;
+    width:80px;
 }
 
 .soc-icon-last{
