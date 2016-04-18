@@ -234,7 +234,7 @@ header:hover > .wrapper-photo > .photo {
 	border-width: 5px;
 	background-image:url('./images/perso2.png');
 	background-position: center;
-	background-size: auto 100%;
+	background-size: 105% 105%;
 	background-repeat: no-repeat;
 	cursor:pointer;
 }
