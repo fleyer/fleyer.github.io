@@ -281,7 +281,7 @@ header:hover > .wrapper-photo > .photo {
 }
 
 contenu {
-	overflow-y:scroll;
+	overflow-y:auto;
 	overflow-x:hidden;
 }
 
