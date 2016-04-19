@@ -229,7 +229,7 @@ header:hover > .wrapper-photo > .photo {
 	position:relative;
 	top:5px;
 	margin-left:auto;
-	margin-bottom:auto;
+	margin-right:auto;
 	border-radius: 50%;
 	border-style:solid;
 	border-width: 5px;
