@@ -380,7 +380,7 @@ div[data-hash="competences"]  {
     display:flex;
     width:100%;
     flex-flow:row;
-    justify-content:space-around;
+    justify-content:space-between;
     
 }
 
@@ -406,7 +406,6 @@ div[data-hash="competences"]  {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    margin-right: 10px;
     color: #ffffff;
     background-color: none;
     width:80px;
